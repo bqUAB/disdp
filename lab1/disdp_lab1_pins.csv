@@ -1,0 +1,49 @@
+From,To,Assignment Name,Value,Enabled
+,sw[0],Location,PIN_J6,Yes
+,sw[1],Location,PIN_H5,Yes
+,sw[2],Location,PIN_H6,Yes
+,sw[3],Location,PIN_G4,Yes
+,sw[4],Location,PIN_G5,Yes
+,sw[5],Location,PIN_J7,Yes
+,sw[6],Location,PIN_H7,Yes
+,sw[7],Location,PIN_E3,Yes
+,sw[8],Location,PIN_E4,Yes
+,sw[9],Location,PIN_D2,Yes
+,sw[0],I/O Standard,LVTTL,Yes
+,sw[1],I/O Standard,LVTTL,Yes
+,sw[2],I/O Standard,LVTTL,Yes
+,sw[3],I/O Standard,LVTTL,Yes
+,sw[4],I/O Standard,LVTTL,Yes
+,sw[5],I/O Standard,LVTTL,Yes
+,sw[6],I/O Standard,LVTTL,Yes
+,sw[7],I/O Standard,LVTTL,Yes
+,sw[8],I/O Standard,LVTTL,Yes
+,sw[9],I/O Standard,LVTTL,Yes
+,hex0[0],Location,PIN_E11,Yes
+,hex0[1],Location,PIN_F11,Yes
+,hex0[2],Location,PIN_H12,Yes
+,hex0[3],Location,PIN_H13,Yes
+,hex0[4],Location,PIN_G12,Yes
+,hex0[5],Location,PIN_F12,Yes
+,hex0[6],Location,PIN_F13,Yes
+,hex1[0],Location,PIN_A13,Yes
+,hex1[1],Location,PIN_B13,Yes
+,hex1[2],Location,PIN_C13,Yes
+,hex1[3],Location,PIN_A14,Yes
+,hex1[4],Location,PIN_B14,Yes
+,hex1[5],Location,PIN_E14,Yes
+,hex1[6],Location,PIN_A15,Yes
+,hex0[0],I/O Standard,LVTTL,Yes
+,hex0[1],I/O Standard,LVTTL,Yes
+,hex0[2],I/O Standard,LVTTL,Yes
+,hex0[3],I/O Standard,LVTTL,Yes
+,hex0[4],I/O Standard,LVTTL,Yes
+,hex0[5],I/O Standard,LVTTL,Yes
+,hex0[6],I/O Standard,LVTTL,Yes
+,hex1[0],I/O Standard,LVTTL,Yes
+,hex1[1],I/O Standard,LVTTL,Yes
+,hex1[2],I/O Standard,LVTTL,Yes
+,hex1[3],I/O Standard,LVTTL,Yes
+,hex1[4],I/O Standard,LVTTL,Yes
+,hex1[5],I/O Standard,LVTTL,Yes
+,hex1[6],I/O Standard,LVTTL,Yes

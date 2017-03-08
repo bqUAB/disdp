@@ -6,15 +6,15 @@ entity disdp_lab1 is
    port(
       clk, rst: in STD_LOGIC;
       en, up:     in STD_LOGIC;
-      hex0: out STD_LOGIC_VECTOR(6 downto 0)  -- 2 seven-segment displays
+      hex0, hex1: out STD_LOGIC_VECTOR(6 downto 0)  -- 2 seven-segment displays
    );
 end disdp_lab1;
 
 architecture sa of disdp_lab1 is   -- Structural architecture (sa)
    constant NUMBER: integer := 6;  -- Bits used by the counter
    signal clk_2Hz: STD_LOGIC;
-   signal p0: STD_LOGIC_VECTOR(3 downto 0);
-   signal p1: STD_LOGIC_VECTOR(1 downto 0);
+   signal bin: STD_LOGIC_VECTOR(5 downto 0);
+   signal bcd: STD_LOGIC_VECTOR(7 downto 0);
 begin
    -- Scale the oscillator
    clock: entity work.so(ba)
@@ -23,12 +23,15 @@ begin
    -- Instantiate the counter
    counter: entity work.ubc(arch)
    generic map(N=>NUMBER)
-   port map(clock=>clk_2Hz, reset=>rst, en=>en,
-            up=>up, q(3 downto 0)=>p0--, q(5 downto 4)=>p1
-   );
+   port map(clock=>clk_2Hz, reset=>rst, en=>en, up=>up, q=>bin);
+   
+   -- Instantiate the BCD block
+   bin2bcd: entity work.bin2bcd6(ba)
+   port map(binary=>bin, bcd=>bcd);
+   
    -- instantiate 2 seven-segment displays
-   ssdd0: entity work.ssdd(tt)
-      port map(d => p0, ds => hex0);
-   -- ssdd1: entity work.ssdd(tt)
-      -- port map(d => p1, ds => hex1);
+   bcd2seven0: entity work.ssdd(tt)
+      port map(d => bcd(3 downto 0), ds => hex0);
+   bcd2seven1: entity work.ssdd(tt)
+      port map(d => bcd(7 downto 4), ds => hex1);
 end sa;

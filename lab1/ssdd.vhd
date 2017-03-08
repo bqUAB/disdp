@@ -1,8 +1,8 @@
 library IEEE;
-use IEEE.STD_LOGIC_1164.all;
+use IEEE.STD_LOGIC_1164.ALL;
 
 -- Seven-segment display decoder (ssdd) from 0 to 9.
--- Common anode, or ON when LOW(0)
+-- Common anode, or ON when LOW (0)
 entity ssdd is
    port(
       d: in  STD_LOGIC_VECTOR(3 downto 0);  -- Data input (d)
